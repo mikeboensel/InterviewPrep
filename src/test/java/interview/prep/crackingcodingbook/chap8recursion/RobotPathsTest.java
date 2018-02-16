@@ -3,6 +3,7 @@ package interview.prep.crackingcodingbook.chap8recursion;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
 
 public class RobotPathsTest {
 
@@ -11,7 +12,6 @@ public class RobotPathsTest {
 		RobotPaths r = new RobotPaths(1);
 		assertEquals(1, r.countPaths());
 	}
-
 	@Test
 	public void fourSquareGrid() {
 		RobotPaths r = new RobotPaths(2);
