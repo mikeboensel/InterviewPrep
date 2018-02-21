@@ -112,7 +112,6 @@ public class MinMax {
 
 			@Override
 			boolean comp(int maxR, int maxL) {
-				// TODO Auto-generated method stub
 				return false;
 			}
 		};
