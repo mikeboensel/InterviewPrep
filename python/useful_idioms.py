@@ -31,6 +31,9 @@ for x in z.items(): # Iterating over the Counter
 
 
 #REGEX
+##Useful regexes \w+ - word characters (alphanumeric + _)
+## Non-word characters \W+
+
 import re
 
 split = re.split("[ ]+", "The   BLUE dog")
@@ -38,3 +41,5 @@ split = re.split("[ ]+", "The   BLUE dog")
 # Looping over things with index + value
 for i,v in enumerate("abc"):
     pass
+
+res = re.findall(r"\w+", "This will take out: punctionation!")
