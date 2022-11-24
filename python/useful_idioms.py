@@ -43,3 +43,7 @@ for i,v in enumerate("abc"):
     pass
 
 res = re.findall(r"\w+", "This will take out: punctionation!")
+
+#Assertions make for better code
+
+assert 1==2, "This will clearly fail. We get this message w/ the failure."
