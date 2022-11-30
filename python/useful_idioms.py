@@ -47,3 +47,12 @@ res = re.findall(r"\w+", "This will take out: punctionation!")
 #Assertions make for better code
 
 assert 1==2, "This will clearly fail. We get this message w/ the failure."
+
+## Different character sets
+import string
+string.ascii_lowercase #"abcdefghijklmnopqrstuvwxyz"
+string.ascii_uppercase # "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+string.ascii_letters # "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+string.digits # "0123456789"
+string.hexdigits #"0123456789abcdefABCDEF"
+string.whitespace #' \t\n\r\x0b\x0c'
