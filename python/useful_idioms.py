@@ -56,3 +56,30 @@ string.ascii_letters # "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 string.digits # "0123456789"
 string.hexdigits #"0123456789abcdefABCDEF"
 string.whitespace #' \t\n\r\x0b\x0c'
+
+# Can also get int values for character ranges via Ordinals
+lower_case_a = ord('a')
+lower_case_z = ord('z') # So character set is all #s between them
+
+# Or can do comparisons
+c = 1
+if 'a' <= c <= 'z':
+    pass
+
+## To duplicate a list (vs have a pointer to) (Can be very helpful to find things like min/max + index of that value via a sort)
+r = [1,2,3]
+v = list(v)
+v.sort()
+(v[0], r.index(v) ) #(minVal, indexItOccurredAt)
+
+## Type hinting
+from typing import List, Tuple
+
+# Bools use capitals (True, False)
+
+# Insane matrix unpacking (TODO:Figure this out)
+
+def luckyNumbers (self, matrix: List[List[int]]) -> List[int]:
+    mi = [min(row) for row in matrix]
+    mx = [max(col) for col in zip(*matrix)]
+    return [cell for i, row in enumerate(matrix) for j, cell in enumerate(row) if mi[i] == mx[j]]
