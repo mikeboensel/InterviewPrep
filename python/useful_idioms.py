@@ -83,3 +83,14 @@ def luckyNumbers (self, matrix: List[List[int]]) -> List[int]:
     mi = [min(row) for row in matrix]
     mx = [max(col) for col in zip(*matrix)]
     return [cell for i, row in enumerate(matrix) for j, cell in enumerate(row) if mi[i] == mx[j]]
+
+# Some objects have a sort on them, but a safe bet is `sorted`
+sorted("bac") # Strings don't have a sort()
+sorted([3,1,2]) #Array does (could do ([3,1,2]).sort() ), but why learn cornercase methods?
+
+# Sets/ Counter can't be used as dictionary keys. Can instead use FrozenSet
+a = "abccc"
+c = Counter(a)
+f = frozenset(c.items())
+m = {}
+m[f] = a
